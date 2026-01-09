@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="club_member_form_view_inherit_l10n_ch" model="ir.ui.view">
+            <field name="name">club.member.form.inherit.l10n_ch</field>
+            <field name="inherit_id" ref="clubmanagement.club_member_form_view" />
+            <field name="model">club.member</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[#name='ssnid']" position="after">
+                    <field name="js_number" />
+                </xpath>
+            </field>
+        </record>
+    
+    </data>
+    
+
+</odoo>
