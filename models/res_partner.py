@@ -12,6 +12,7 @@ from odoo import api, fields, models
 class ResPartner(models.Model):
     """Extend res.partner to validate OASI in ssnid field"""
 
+    _name = "res.partner"
     _inherit = ["res.partner", 'oasi.validation.mixin']
     _inherit_oasi = True  # Flag to show this model includes OASI validation
 
