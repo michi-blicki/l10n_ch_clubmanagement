@@ -22,7 +22,8 @@ class ResPartner(models.Model):
 
         for record in self:
             ssnid = record.ssnid
-            if ssnid:
+            country = record.country_id
+            if ssnid and country and country.id == self.env.ref("base.ch").id:
                 # Only validate if it looks like a Swiss ID (starts with 756)
                 sanitized = OASIValidator.sanitize(ssnid)
                 if sanitized.startswith("756"):
@@ -37,7 +38,8 @@ class ResPartner(models.Model):
         from .oasi_validator import OASIValidator
 
         ssnid = self.ssnid
-        if ssnid:
+        country = self.country_id
+        if ssnid and country and country.id == self.env.ref("base.ch").id:
             # Only validate if it looks like a Swiss ID (starts with 756)
             sanitized = OASIValidator.sanitize(ssnid)
             if sanitized.startswith("756"):

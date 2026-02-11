@@ -28,7 +28,7 @@ For more information, visit: https://github.com/michi-blicki/Odoo_Clubmanagement
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Association',
-    'version': '18.0.1.1.0',
+    'version': '18.0.1.2.0',
     'application': False,
     'auto_install': False,
     'installable': True,
@@ -41,7 +41,7 @@ For more information, visit: https://github.com/michi-blicki/Odoo_Clubmanagement
 
     # always loaded
     'data': [
-
+        'views/club_20_view_member_form.xml',
     ],
 
     'assets': {
