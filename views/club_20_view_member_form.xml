@@ -8,7 +8,7 @@
             <field name="inherit_id" ref="clubmanagement.club_member_form_view" />
             <field name="model">club.member</field>
             <field name="arch" type="xml">
-                <xpath expr="//field[#name='ssnid']" position="after">
+                <xpath expr="//field[@name='ssnid']" position="after">
                     <field name="js_number" />
                 </xpath>
             </field>
