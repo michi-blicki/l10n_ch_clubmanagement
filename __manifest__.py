@@ -2,32 +2,41 @@
 {
     'name': "l10n_ch_clubmanagement",
 
-    'summary': "Clubmanagement: Switzerland",
+    'summary': "Swiss Localization for Club Management",
 
     'description': """
-This is a small Addon, that enhances the clubmanagement suite, available at https://github.com/michi-blicki/Odoo_Clubmanagement.git.
+Swiss localization addon for Odoo Club Management system.
+
+Extends the club member module with Switzerland-specific features:
+- J+S Number (Jugend+Sport) field for members
+- Automatic SSN ID validation (compliance with Swiss youth sports regulations)
+- Age-based member classification for Swiss sport associations
+
+Requires the clubmanagement addon.
+For more information, visit: https://github.com/michi-blicki/Odoo_Clubmanagement
     """,
 
     #
     # Issuer Specification
     'author': "Michael Blickenstorfer",
-    'website': "https://www.blicki.ch",
+    'website': "https://github.com/michi-blicki/l10n_ch_clubmanagement",
     'license': "AGPL-3",
-    #'price': 30.00,
+    #'price': 10.00,
     #'currency': "CHF",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Association',
-    'version': '18.0.0.4.0',
+    'version': '18.0.1.1.0',
     'application': False,
     'auto_install': False,
     'installable': True,
 
     # any module necessary for this one to work correctly
     'depends': [
-        'clubmanagement'
+        'clubmanagement',
+        'l10n_ch_oasi_verification',
     ],
 
     # always loaded
