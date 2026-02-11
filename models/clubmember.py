@@ -6,6 +6,7 @@ class ClubMember(models.Model):
     _name = 'club.member'
     _inherit = 'club.member'
 
+
     js_number = fields.Integer(string="J+S Number", required=False, readonly=False)
 
     @api.depends('birthdate_date')
